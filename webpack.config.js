@@ -70,8 +70,8 @@ module.exports = [
           loader: 'pug-loader',
           options: { 
             pretty: true, 
-            // root: './src/components/',
-            basedir: path.resolve(__dirname, 'src/components')
+            root: path.resolve(__dirname, 'src/components/')
+            // basedir: path.resolve(__dirname, 'src/components')
           }
         },
         {

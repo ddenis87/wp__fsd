@@ -1,9 +1,11 @@
+@import '@src/variables.scss';
+
 body {
   padding: 30px;
 }
 
 .header {
-  max-width: 1440px;
+  max-width: $pageWidthDefault; // - from variables.scss
   padding: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -30,7 +32,7 @@ body {
   display: grid;
   grid-template-areas: "color-block title-block";
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -59,5 +61,22 @@ body {
       position: relative;
       top: -3px;
     }
+  }
+}
+
+@media screen and (max-width: $pageWidthMobile) { // - from variables.scss
+  .content__colors-and-type {
+    display: grid;
+    grid-template-areas: "color-block" "title-block";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .color-block::after {
+    content: '';
+    border: 1px solid grey;
+    width: 100%;
+    margin: 15px 0px;
   }
 }

@@ -10,7 +10,6 @@ module.exports = [
       stats: 'errors-only',
       open: true
     },
-    
   },
   {
     mode: 'development',
@@ -43,6 +42,43 @@ module.exports = [
       new HtmlWebpackPlugin({
         template: './src/views/ul-kit/colors-and-type/colors-and-type.pug',
         filename: 'colors-and-type.html'
+      }),
+      new miniCSS({
+        filename: '[name].css'
+      })
+    ],
+  },
+  {
+    mode: 'development',
+    entry: {
+      'form-elements': './src/views/ul-kit/form-elements/form-elements.js'
+    },
+    output: {
+      path: path.resolve(__dirname, 'dist/views/ul-kit/form-elements'),
+      filename: '[name].js'
+    },
+    resolve: {
+      alias: {
+        '@src': path.resolve(__dirname, 'src')
+      }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.pug$/,
+          loader: 'pug-loader',
+          options: { pretty: true }
+        },
+        {
+          test: /\.scss$/,
+          use: [miniCSS.loader, 'css-loader', 'sass-loader']
+        }
+      ]
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/views/ul-kit/form-elements/form-elements.pug',
+        filename: 'form-elements.html'
       }),
       new miniCSS({
         filename: '[name].css'

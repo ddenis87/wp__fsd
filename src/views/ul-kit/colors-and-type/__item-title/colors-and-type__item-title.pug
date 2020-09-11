@@ -1,0 +1,14 @@
+mixin item-title(option)
+  - let nameClass = 'body'
+  case option.type
+    when 'h1'
+      - nameClass = 'h1'
+    when 'h2'
+      - nameClass = 'h2'
+    when 'h3'
+      - nameClass = 'h3'
+  .item-title
+    .item-title__title
+      span(class= 'item-title__title-' + nameClass)= option.title
+    .item-title__text
+      span(class= 'item-title__text-' + nameClass)= option.text

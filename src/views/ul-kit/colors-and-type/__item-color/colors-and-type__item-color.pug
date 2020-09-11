@@ -1,0 +1,6 @@
+mixin item-color(option)
+  .item-color
+    .color-palette(style= {'background-color': option.color})
+    .color-description
+      p.color-description-text(class= 'color-description-text__name')= option.name
+      p.color-description-text(class= 'color-description-text__value')= option.value

@@ -1,0 +1,25 @@
+.item-color {
+  display: inline-flex;
+  align-items: center;
+  .color-palette {
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+    border-radius: 6px;
+  }
+  .color-description {
+    .color-description-text {
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-size: 19px;
+      line-height: 29px;
+      margin: 0px;
+      &__name {
+        font-weight: bold;
+      }
+      &__value {
+        font-weight: normal;
+      }
+    }
+  }
+}

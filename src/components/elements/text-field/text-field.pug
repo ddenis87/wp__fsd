@@ -1,0 +1,12 @@
+mixin text-field(option)
+	- let inputType = 'text'
+	.text-field
+		.text-field__title
+			span.title= option.title
+			span.title-sub= option.titleSub
+		.text-field__body
+			input.body-input(
+				type= inputType,
+				id= option.id,
+				placeholder= option.placeholder
+			)

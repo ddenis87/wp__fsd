@@ -59,7 +59,8 @@ module.exports = [
     },
     resolve: {
       alias: {
-        '@src': path.resolve(__dirname, 'src')
+        '@src': path.resolve(__dirname, 'src'),
+        '@components': path.resolve(__dirname, 'src/components')
       }
     },
     module: {
@@ -67,7 +68,11 @@ module.exports = [
         {
           test: /\.pug$/,
           loader: 'pug-loader',
-          options: { pretty: true }
+          options: { 
+            pretty: true, 
+            // root: './src/components/',
+            basedir: path.resolve(__dirname, 'src/components')
+          }
         },
         {
           test: /\.scss$/,

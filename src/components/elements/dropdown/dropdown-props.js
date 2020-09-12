@@ -5,12 +5,8 @@ export default class DropdownProps {
     this.id = option.id;
     this.typeSelectTitle = option.typeSelectTitle;
     this.propsMask = option.propsMask;
-    // if (option.titleDefault) { this.titleDefault = option.titleDefault; }
-    // this.values = {'value': []}
     this.arrProps = [];
     let dropdownPropsItem = document.querySelectorAll(`#${this.id}Slider .dropdown-props__item`);
-    // console.log(dropdownPropsItem);
-    // document.getElementById(this.id + 'Slider').addEventListener('click', (event) => this.clickSlider(event));
 
     for (let i = 0; i < dropdownPropsItem.length; i++) {
       let dropdownPropsItemClass = new DropdownPropsItem({
@@ -18,42 +14,21 @@ export default class DropdownProps {
         'propsDefault' : option.propsDefault[i],
         'propsLimit': option.propsLimit[i]
       });
-      // this.arrProps.push({'id': dropdownPropsItem[i].id, 'class': dropdownPropsItemClass});
       this.arrProps.push(dropdownPropsItemClass);
     }
-    // console.log(this.arrProps)
-    // if (option.control == false) document.getElementById(this.id + 'Control').classList.add('dropdown__control_noneVisibility')
 
-    // this.dropdownControl = new DropdownControl(this.id, this.arrProps);
-    // this.updateTitle();
-    // this.setDropdownDefault(option);
     this.setValueDefault();
     this.updateSelectTitle(this.typeSelectTitle);
   }
 
-  // clickSlider(event) {
-  //   if (event.target.id.slice(-9) == 'Increment' || event.target.id.slice(-9) == 'Decrement') {
-  //     // this.dropdownControl.enableClear();
-  //     this.updateSelectTitle(this.typeSelectTitle);
-  //   }
-  //   //  else if (event.target.id.slice(-5) == 'Clear') {
-  //   //   this.dropdownControl.setDropdownDefault(this.listPropsItem);
-  //   //   if (this.titleDefault) document.getElementById(this.idDropdown + 'Title').innerText = this.titleDefault;
-  //   // } else if (event.target.id.slice(-5) == 'Apply') {
-  //   //   this.dropdownClose();
-  //   // }
-  // }
-
   setValueDefault() {
     for (let i = 0; i < this.arrProps.length; i++) {
-      // this.arrProps[i].class.setValueDefault();
       this.arrProps[i].setValueDefault();
     }
     this.updateSelectTitle(this.typeSelectTitle);
   }
   getValue() {
     let values = [];
-    // this.values.value.length = 0;
     for (let propsItem of this.arrProps) {
       values.push({'id': this.id + '__' + propsItem.idPropsItem, 'value': propsItem.value });
     }

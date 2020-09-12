@@ -17,15 +17,11 @@
     text-transform: uppercase;
     cursor: pointer;
     
-
     &_apply { color: #BC9CFF; }
     &_clear { color: rgba(31, 32, 65, 0.5); }
     &_clear_disabled { visibility: hidden; }
   }
-  &_noneVisibility {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    visibility: hidden;
+  &_noneDisplay {
+    display: none;
   }
 }

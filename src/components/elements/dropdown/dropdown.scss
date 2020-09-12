@@ -21,9 +21,7 @@
       color: rgba(31, 32, 65, 0.5);
     }
   }
-
   .dropdown-body {
-
     outline: none;
 
     &__select {
@@ -40,7 +38,6 @@
       &-drop {
         border: 1px solid rgba(31, 32, 65, 0.5);
       }
-
       .select__title {
         padding-left: 14px;
         font-family: Montserrat;
@@ -65,7 +62,6 @@
         }
       }
     }
-
     &__slider {
       position: relative;
       display: flex;

@@ -4,30 +4,6 @@ body {
   padding: 30px;
 }
 
-.header {
-  max-width: $pageWidthDefault; // - from variables.scss
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  height: 105px;
-}
-
-.logo {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  box-sizing: border-box;
-  svg {
-    position: absolute;
-  }
-  .v1 { left: 11px; top: 18px;}
-  .v2 { left: 25px; top: 18px; }
-}
-
 .content__colors-and-type {
   display: grid;
   grid-template-areas: "color-block title-block";

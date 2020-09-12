@@ -30,7 +30,10 @@ module.exports = [
         {
           test: /\.pug$/,
           loader: 'pug-loader',
-          options: { pretty: true }
+          options: { 
+            pretty: true,
+            root: path.resolve(__dirname, 'src/components/')
+          }
         },
         {
           test: /\.scss$/,
@@ -71,7 +74,6 @@ module.exports = [
           options: { 
             pretty: true, 
             root: path.resolve(__dirname, 'src/components/')
-            // basedir: path.resolve(__dirname, 'src/components')
           }
         },
         {

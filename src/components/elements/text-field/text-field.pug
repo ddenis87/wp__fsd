@@ -1,11 +1,14 @@
 mixin text-field(option)
 	- let inputType = 'text'
+	- let classType = 'body-input'
+	- if ('type' in option) inputType = option.inputType
+	- if ('focus' in option && option.focus == true) classType = 'body-input body-input_focus'
 	.text-field
 		.text-field__title
 			span.title= option.title
 			span.title-sub= option.titleSub
 		.text-field__body
-			input.body-input(
+			input(class= classType,
 				type= inputType,
 				id= option.id,
 				placeholder= option.placeholder

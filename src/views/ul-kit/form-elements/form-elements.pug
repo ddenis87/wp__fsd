@@ -5,8 +5,21 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Form elements
     body
+      include /units/header-ul-kit/header-ul-kit.pug
       include form-elements__components.pug
-      +text-field({
-        title: 'text field',
-        titleSub: 'text field',
-      })
+
+      +header-ul-kit()
+
+      .element-width_320
+        +text-field({
+          title: 'text field',
+          titleSub: 'default',
+          placeholder: 'Email'
+        })
+      .element-width_320
+        +text-field({
+          title: 'text field',
+          titleSub: 'hover / focus',
+          placeholder: 'This is pretty awesome',
+          focus: true
+        })

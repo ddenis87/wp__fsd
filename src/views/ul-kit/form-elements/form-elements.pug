@@ -23,3 +23,15 @@ html(lang="en")
           placeholder: 'This is pretty awesome',
           focus: true
         })
+      .element-width_320
+        +dropdown({
+          id: 'propsRoom',
+          type: 'props',
+          title: 'dropdown',
+          titleSub: 'default',
+          props: [
+            {id: 'propsRoomBedrooms', title: 'Спальни'},
+            {id: 'propsRoomBeds', title: 'Кровати'},
+            {id: 'propsRoomBathrooms', title: 'Ванные комнаты'},
+          ]
+        })

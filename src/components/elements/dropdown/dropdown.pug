@@ -1,0 +1,23 @@
+include __control/dropdown__control.pug
+
+mixin dropdown(option)
+  .dropdown
+    .dropdown-title
+      span.dropdown-title__title= ('title' in option) ? option.title : ''
+      span.dropdown-title__title-sub= ('titleSub' in option) ? option.titleSub : ''
+    .dropdown-body(id= option.id, tabindex= 0)
+      .dropdown-body__select(id= option.id + 'Box')
+        span.select__title(id= option.id + 'SelectTitle')
+        div.select__button(id= option.id + 'ButtonDrop')
+          svg(width="12", height="8", viewBox="0 0 12 8", fill="none", xmlns="http://www.w3.org/2000/svg")
+            path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z", fill="#1F2041", fill-opacity="0.75")
+      .dropdown-body__slider(id= option.id + 'Slider')
+        case option.type
+          when 'props'
+            include __item/dropdown-props__item.pug
+            each prop in option.props
+              +dropdown-props__item(prop)
+          when 'date'
+            //- include __date/dropdown-date__date.pug
+            //- +dropdown-date__date(option)
+        +dropdown__control(option.id)

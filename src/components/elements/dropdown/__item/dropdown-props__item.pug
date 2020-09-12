@@ -1,0 +1,8 @@
+mixin dropdown-props__item(option)
+  .dropdown-props__item(id= '' + option.id)
+    .dropdown-props__title
+      span= option.title
+    .dropdown-props__control
+      button.control__button(id= option.id + 'Decrement') -
+      span.control__value(id= option.id + 'Value')= ('defaultValue' in option) ? option.defaultValue : 0
+      button.control__button(id= option.id + 'Increment') +

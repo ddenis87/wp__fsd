@@ -3,21 +3,27 @@
 import './dropdown.scss';
 // - JS
 import DropdownProps from './dropdown-props.js';
+import DropdownDate from './dropdown-date.js';
 import DropdownControl from './__control/dropdown__control.js';
 
 export default class Dropdown {
   constructor(option) {
     this.id = option.id;
     this.typeSelectTitle = option.typeSelectTitle;
+    this.type = option.type;
     this.DropdownSlider = {};
     let isControl = ('control' in option && option.control == true) ? true : false;
 
     document.getElementById(this.id).addEventListener('blur', () => this.dropdownClose());
     document.getElementById(this.id + 'ButtonDrop').addEventListener('click', () => this.dropdownSwitch());
     document.getElementById(this.id + 'Slider').addEventListener('click', (event) => this.dropdownSliderClick(event));
-    switch(option.type) {
+    switch(this.type) {
       case 'props': 
         this.DropdownSlider = new DropdownProps(option); 
+        break;
+      case 'date':
+        this.DropdownSlider = new DropdownDate(option);
+        isControl = true;
         break;
     }
     if (isControl) {
@@ -35,6 +41,10 @@ export default class Dropdown {
     document.getElementById(this.id + 'Box').classList.remove('dropdown-body__select-drop');
   }
   dropdownSliderClick(event) {
+    if (this.type == 'date') {
+      if (this.DropdownControl) this.DropdownControl.enableClear();
+      this.dropdownUpdateSelectTitle();
+    }
     if (event.target.id.slice(-9) == 'Increment' || event.target.id.slice(-9) == 'Decrement') {
       if (this.DropdownControl) this.DropdownControl.enableClear();
       this.dropdownUpdateSelectTitle();

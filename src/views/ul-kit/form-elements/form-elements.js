@@ -21,3 +21,8 @@ let roomProps = new Dropdown({
     ['ванная комната','ванные комнаты','ванных комнат'],
   ],
 })
+let entryDate = new Dropdown({
+  id: 'entryDate',
+  type: 'date',
+  // range: false
+})

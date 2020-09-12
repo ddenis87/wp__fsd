@@ -1,0 +1,106 @@
+@import './air-date/css/datepicker.css';
+
+.dropdown {
+  .dropdown-body {
+    &__slider-date {
+      min-width: 320px;
+      padding-left: 11px;
+      padding-right: 12px;
+      border-top: 1px solid rgba(31, 32, 65, 0.5);
+      border-radius: 3px;
+    }
+    &__control-date {
+      padding: 8px;
+      padding-top: 16px;
+      padding-bottom: 14px;
+    }
+  }
+}
+
+.datepicker {
+  width: auto;
+  max-width: 320px;
+  padding-top: 10px;
+  border: 0;
+  box-sizing: border-box;
+
+  &--nav {
+    border: 0px;
+    &-title {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1F2041;
+      i { color: #1F2041; }
+    }
+    &-action {
+      path {
+        fill: #BC9CFF;
+        stroke: none;
+        stroke-width: 1px;
+      }
+      svg {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  &--content {
+    padding: 4px 10px;
+    padding-right: 8px;
+    padding-top: 27px;
+  }
+
+  &--day-name {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #BC9CFF;
+    text-transform: capitalize;
+  }
+
+  &--cells {
+    margin-top: 12px;
+  }
+  &--cell {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 40px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: rgba(31, 32, 65, 0.5);
+
+    &.-selected- {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      &.-focus- {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      }
+    }
+    &.-focus- {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+    &.-range-from- {
+      border-radius: 40px 0px 0px 40px;
+    }
+    &.-range-to- {
+      border-radius: 0px 40px 40px 0px;
+    }
+    &.-in-range- {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      opacity: 0.25
+    }
+  }
+
+}
+  

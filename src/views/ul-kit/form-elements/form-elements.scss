@@ -1,6 +1,4 @@
-@import '@src/fonts.scss';
-@import '@src/variables.scss';
-
+@import '@src/common__ul-kit.scss';
 
 body {
   padding: 30px;
@@ -8,4 +6,5 @@ body {
 
 .element-width_320 {
   width: 320px;
+  margin-bottom: 20px;
 }

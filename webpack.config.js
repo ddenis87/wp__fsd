@@ -11,7 +11,7 @@ module.exports = [
       open: true
     },
   },
-  {
+  { // - colors-and-type
     mode: 'development',
     entry: {
       'colors-and-type': './src/views/ul-kit/colors-and-type/colors-and-type.js'
@@ -22,7 +22,8 @@ module.exports = [
     },
     resolve: {
       alias: {
-        '@src': path.resolve(__dirname, 'src')
+        '@src': path.resolve(__dirname, 'src'),
+        '@components': path.resolve(__dirname, 'src/components')
       }
     },
     module: {
@@ -51,7 +52,7 @@ module.exports = [
       })
     ],
   },
-  {
+  { // - form-elements
     mode: 'development',
     entry: {
       'form-elements': './src/views/ul-kit/form-elements/form-elements.js'

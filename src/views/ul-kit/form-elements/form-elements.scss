@@ -4,6 +4,30 @@ body {
   padding: 30px;
 }
 
+.content__form-elements {
+  display: grid;
+  grid-template-areas: "collumn-one collumn-two collumn-three";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid green;
+}
+
+.collumn-one {
+  grid-area: collumn-one;
+  border: 1px solid blue;
+}
+.collumn-two {
+  grid-area: collumn-two;
+  border: 1px solid blue;
+}
+.collumn-three {
+  grid-area: collumn-three;
+  border: 1px solid blue;
+}
+
 .element-width_320 {
   width: 320px;
   margin-bottom: 20px;

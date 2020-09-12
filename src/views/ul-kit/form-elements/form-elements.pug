@@ -10,35 +10,42 @@ html(lang="en")
 
       +header-ul-kit()
 
-      .element-width_320
-        +text-field({
-          title: 'text field',
-          titleSub: 'default',
-          placeholder: 'Email'
-        })
-      .element-width_320
-        +text-field({
-          title: 'text field',
-          titleSub: 'hover / focus',
-          placeholder: 'This is pretty awesome',
-          focus: true
-        })
-      .element-width_320
-        +dropdown({
-          id: 'propsRoom',
-          type: 'props',
-          title: 'dropdown',
-          titleSub: 'default',
-          props: [
-            {id: 'propsRoomBedrooms', title: 'Спальни'},
-            {id: 'propsRoomBeds', title: 'Кровати'},
-            {id: 'propsRoomBathrooms', title: 'Ванные комнаты'},
-          ]
-        })
-      .element-width_220
-        +dropdown({
-          id: 'entryDate',
-          type: 'date',
-          title: 'date',
-          titleSub: 'default',
-        })
+      .content__form-elements
+        .collumn-one
+          .element-width_320
+            +text-field({
+              title: 'text field',
+              titleSub: 'default',
+              placeholder: 'Email'
+            })
+          .element-width_320
+            +text-field({
+              title: 'text field',
+              titleSub: 'hover / focus',
+              placeholder: 'This is pretty awesome',
+              focus: true
+            })
+          .element-width_320
+            +dropdown({
+              id: 'propsRoom',
+              type: 'props',
+              title: 'dropdown',
+              titleSub: 'default',
+              props: [
+                {id: 'propsRoomBedrooms', title: 'Спальни'},
+                {id: 'propsRoomBeds', title: 'Кровати'},
+                {id: 'propsRoomBathrooms', title: 'Ванные комнаты'},
+              ]
+            })
+          .element-width_220
+            +dropdown({
+              id: 'entryDate',
+              type: 'date',
+              title: 'date',
+              titleSub: 'default',
+            })
+
+        .collumn-two
+          123
+        .collumn-three
+          321

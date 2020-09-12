@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniCSS = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = [
   {
@@ -90,6 +91,10 @@ module.exports = [
       }),
       new miniCSS({
         filename: '[name].css'
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
       })
     ],
   },

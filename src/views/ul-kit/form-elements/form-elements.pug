@@ -37,15 +37,20 @@ html(lang="en")
                 {id: 'propsRoomBathrooms', title: 'Ванные комнаты'},
               ]
             })
-          .element-width_220
+          .element-width_150
             +dropdown({
               id: 'entryDate',
               type: 'date',
-              title: 'date',
-              titleSub: 'default',
+              title: 'date dropdown',
+              titleSub: '',
             })
 
         .collumn-two
           123
         .collumn-three
-          321
+          .element-width_266
+            +slider-bar({ 
+              id: 'sumSlider',
+              title: 'range slider',
+              type: 'range'
+            })

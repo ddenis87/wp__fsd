@@ -1,0 +1,12 @@
+mixin slider-bar(option)
+  .slider-bar
+    .slider-head
+      span.slider-head__title= option.title
+      span.slider-head__value 5 000&#8381; - 10 000&#8381;
+    .slider-body(id= option.id + 'Body')
+      if option.type == 'slider'
+        include __slider/slider-bar__slider.pug
+        +slider(option.id)
+      else if option.type == 'range'
+        include __range/slider-bar__range.pug
+        +slider-range(option.id)

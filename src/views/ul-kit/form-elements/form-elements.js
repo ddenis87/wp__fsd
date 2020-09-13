@@ -7,6 +7,7 @@ import '@components/units/header-ul-kit/header-ul-kit.js'
 
 // components form
 import '@components/elements/text-field/text-field.js'
+import '@components/elements/toggle/toggle.js'
 import Dropdown from '@components/elements/dropdown/dropdown.js'
 import SliderBar from '@components/elements/slider-bar/slider-bar'
 
@@ -25,7 +26,15 @@ let roomProps = new Dropdown({
 let entryDate = new Dropdown({
   id: 'entryDate',
   type: 'date',
-  // range: false
+})
+let outDate = new Dropdown({
+  id: 'outDate',
+  type: 'date',
+})
+let rangeDate = new Dropdown({
+  id: 'rangeDate',
+  type: 'date',
+  range: true
 })
 
 let sumSlider = new SliderBar(

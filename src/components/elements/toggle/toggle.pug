@@ -1,0 +1,12 @@
+// - option = {id, text, isChecked}
+mixin toggle(option)
+  .toggle
+    label.toggle__label
+      input.toggle__checkbox(
+        type='checkbox', 
+        id=option.id, 
+        checked=option.isChecked
+      )
+      .toggle__slider
+        .toggle__circle
+      = option.text

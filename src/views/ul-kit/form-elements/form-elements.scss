@@ -28,6 +28,13 @@ body {
   // border: 1px solid blue;
 }
 
+.element-group-line {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+
+}
+
 .element-width_320 {
   width: 320px;
   margin-bottom: 20px;

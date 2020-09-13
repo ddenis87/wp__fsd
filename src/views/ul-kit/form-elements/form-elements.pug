@@ -25,7 +25,29 @@ html(lang="en")
               placeholder: 'This is pretty awesome',
               focus: true
             })
-          .element-width_320
+          .element-group-line
+            .element-width_150
+              +dropdown({
+                id: 'entryDate',
+                type: 'date',
+                title: 'date dropdown',
+                titleSub: '',
+              })
+            .element-width_150
+              +dropdown({
+                id: 'outDate',
+                type: 'date',
+                title: 'date dropdown',
+                titleSub: '',
+              })
+          .element-width_266
+            +dropdown({
+                id: 'rangeDate',
+                type: 'date',
+                title: 'filter date dropdown',
+                titleSub: '',
+              })
+          .element-width_266
             +dropdown({
               id: 'propsRoom',
               type: 'props',
@@ -37,16 +59,11 @@ html(lang="en")
                 {id: 'propsRoomBathrooms', title: 'Ванные комнаты'},
               ]
             })
-          .element-width_150
-            +dropdown({
-              id: 'entryDate',
-              type: 'date',
-              title: 'date dropdown',
-              titleSub: '',
-            })
+          
 
         .collumn-two
-          123
+          +toggle({id: 'specOffer', text: 'Получать спецпредложения', isChecked: true})
+          +toggle({id: 'specOffer-sec', text: 'Получать спецпредложения'})
         .collumn-three
           .element-width_266
             +slider-bar({ 

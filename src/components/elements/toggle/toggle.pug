@@ -1,6 +1,8 @@
 // - option = {id, text, isChecked}
 mixin toggle(option)
   .toggle
+    - if ('title' in option)
+      span.toggle__title= option.title
     label.toggle__label
       input.toggle__checkbox(
         type='checkbox', 

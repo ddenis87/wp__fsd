@@ -3,7 +3,7 @@ import './form-elements.scss'
 
 // javaScript
 // - units component
-import '@components/units/header-ul-kit/header-ul-kit.js'
+import '@components/units/ul-kit/header/header.js'
 
 // components form
 import '@components/elements/text-field/text-field.js'

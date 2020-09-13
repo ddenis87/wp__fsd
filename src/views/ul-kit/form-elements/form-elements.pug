@@ -25,7 +25,7 @@ html(lang="en")
               placeholder: 'This is pretty awesome',
               focus: true
             })
-          .element-group-line
+          .element-group-line(class= 'element-group-line_320')
             .element-width_150
               +dropdown({
                 id: 'entryDate',
@@ -72,3 +72,38 @@ html(lang="en")
               title: 'range slider',
               type: 'range'
             })
+
+          .element-group-line(class= 'element-group-line_220')
+            .element-width_100
+              +button-box({
+                id: 'btn1',
+                title:'click me',
+                hover: false,
+                fill: true,
+                arrow: false
+              })
+            .element-width_100
+              +button-box({
+                id: 'btn2',
+                title:'click me',
+                hover: true,
+                fill: true,
+                arrow: false
+              })
+          .element-group-line(class= 'element-group-line_220')
+            .element-width_100
+              +button-box({
+                id: 'btn1',
+                title:'click me',
+                hover: false,
+                fill: false,
+                arrow: false
+              })
+            .element-width_100
+              +button-box({
+                id: 'btn2',
+                title:'click me',
+                hover: true,
+                fill: false,
+                arrow: false
+              })

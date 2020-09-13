@@ -31,8 +31,9 @@ body {
 .element-group-line {
   display: flex;
   justify-content: space-between;
-  width: 320px;
 
+  &_320 { width: 320px; }
+  &_220 { width: 220px; }
 }
 
 .element-width_320 {
@@ -52,6 +53,11 @@ body {
 }
 .element-width_150 {
   width: 150px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.element-width_100 {
+  width: 100px;
   margin-bottom: 20px;
   box-sizing: border-box;
 }

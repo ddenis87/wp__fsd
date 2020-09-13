@@ -8,6 +8,7 @@ import '@components/units/header-ul-kit/header-ul-kit.js'
 // components form
 import '@components/elements/text-field/text-field.js'
 import '@components/elements/toggle/toggle.js'
+import '@components/elements/button-box/button-box.js'
 import Dropdown from '@components/elements/dropdown/dropdown.js'
 import SliderBar from '@components/elements/slider-bar/slider-bar'
 
